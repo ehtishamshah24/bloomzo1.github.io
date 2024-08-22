@@ -67,6 +67,68 @@
    
 }
 
+/* brand slider  */
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.slider {
+    overflow: hidden;
+    position: relative;
+    width: 100%; /* Full width */
+}
+
+.slider .slider-track {
+    display: flex;
+    width: 200%; /* Twice the width of the container for smooth scrolling */
+    animation: scroll 30s linear infinite;
+}
+
+.slider .slide {
+    flex: 1 0 auto; /* Flex grow and shrink */
+    min-width: 20%; /* Adjust this value based on the number of slides and desired visible slides */
+    box-sizing: border-box; /* Ensures padding/margins do not affect width */
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    padding: 20px 10px; /* Optional: Space between slides */
+}
+
+.slider .slide img {
+    max-height: 50px; /* Ensure images scale with the height of the slide */
+}
+
+
+.slider .slide h4 {
+    color: white;
+}
+
+/* Default to one slide at a time */
+@media (min-width: 768px) {
+    .slider .slide {
+        min-width: 50px; /* Full width for each slide on larger screens */
+    }
+}
+
+/* Show two slides at a time on smaller screens */
+@media (max-width: 767px) {
+    .slider .slider-track {
+        width: 120%; /* Adjust based on number of slides to show at once */
+    }
+
+    .slider .slide {
+        min-width: 50%; /* Two slides visible at a time */
+    }
+}
+
+
+
 
 
 
@@ -170,6 +232,55 @@
             </section>
             
             <!-- section close -->
+
+            <!-- brands Section Begin  -->
+
+            <div class="container slider" style="background-color: #18191b;">
+                <div class="slider-track">
+                    <div class="slide">
+                        <img src="images/brand/google.png" style=" display: inline;" alt="">
+                        <h4 style="display: inline;">Google</h4>
+                    </div>
+                    <div class="slide">
+                        <img src="images/brand/google.png" style=" display: inline;" alt="">
+                        <h4 style="display: inline;">Google</h4>
+                    </div>
+                    <div class="slide">
+                        <img src="images/brand/google.png" style=" display: inline;" alt="">
+                        <h4 style="display: inline;">Google</h4>
+                    </div>
+                    <div class="slide">
+                        <img src="images/brand/google.png" style="height: 50px; display: inline;" alt="">
+                        <h4 style="display: inline;">Google</h4>
+                    </div>
+                    <div class="slide">
+                        <img src="images/brand/google.png" style="height: 50px; display: inline;" alt="">
+                        <h4 style="display: inline;">Google</h4>
+                    </div>
+                    <!-- Duplicate slides to ensure seamless looping -->
+                    <div class="slide">
+                        <img src="images/brand/google.png" style="height: 50px; display: inline;" alt="">
+                        <h4 style="display: inline;">Google</h4>
+                    </div>
+                    <div class="slide">
+                        <img src="images/brand/google.png" style="height: 50px; display: inline;" alt="">
+                        <h4 style="display: inline;">Google</h4>
+                    </div>
+                    <div class="slide">
+                        <img src="images/brand/google.png" style="height: 50px; display: inline;" alt="">
+                        <h4 style="display: inline;">Google</h4>
+                    </div>
+                    <div class="slide">
+                        <img src="images/brand/google.png" style="height: 50px; display: inline;" alt="">
+                        <h4 style="display: inline;">Google</h4>
+                    </div>
+                    <div class="slide">
+                        <img src="images/brand/google.png" style="height: 50px; display: inline;" alt="">
+                        <h4 style="display: inline;">Google</h4>
+                    </div>
+                </div>
+            </div>
+            
 
 
             <!-- Services section begin -->
@@ -418,10 +529,10 @@ and expansion of your business. When your business prospers, so do we. We consid
                                 <div class="item">
                                     <div class="de_testi opt-2">
                                         <blockquote>
-                                            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore.</p>
+                                            <p style="font-size: 13px;"> Working with Bloomzzo Digital Solutions has been a game-changer for our business. Their innovative strategies and deep understanding of digital marketing helped us significantly boost our online presence. They’re always ahead of the curve and provide personalized service that genuinely feels like a partnership. Highly recommend their services for anyone looking to elevate their brand</p>
                                             <div class="de_testi_by">
                                                 <img src="images/people/1.jpg" class="img-circle" alt="">
-                                                <span>John, Pixar Studio</span>
+                                                <span>Martin Schellmann - Owner at GerroMed GmbH</span>
                                             </div>
                                         </blockquote>
                                     </div>
@@ -430,10 +541,10 @@ and expansion of your business. When your business prospers, so do we. We consid
                                 <div class="item">
                                     <div class="de_testi opt-2">
                                         <blockquote>
-                                            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore.</p>
+                                            <p style="font-size: 13px;">Bloomzzo Digital Solutions transformed our digital marketing efforts. From SEO to social media management, their team delivered exceptional results. Their detailed reporting and insights helped us understand what was working and where we could improve. Their commitment to excellence and customer satisfaction is unparalleled.</p>
                                             <div class="de_testi_by">
                                                 <img src="images/people/2.jpg" class="img-circle" alt="">
-                                                <span>Sarah, Microsoft</span>
+                                                <span>Lisa Beecken - Owner Elisabeth Manthey Immobilien & Hausverwaltung</span>
                                             </div>
                                         </blockquote>
                                     </div>
@@ -442,10 +553,10 @@ and expansion of your business. When your business prospers, so do we. We consid
                                 <div class="item">
                                     <div class="de_testi opt-2">
                                         <blockquote>
-                                            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore.</p>
+                                            <p style="font-size: 13px;">I can’t thank Bloomzzo Digital Solutions enough for their outstanding work. They crafted a comprehensive digital marketing strategy that perfectly aligned with our business goals. Their proactive approach and creative solutions have led to a noticeable increase in our website traffic and conversions.</p>
                                             <div class="de_testi_by">
                                                 <img src="images/people/3.jpg" class="img-circle" alt="">
-                                                <span>Michael, Apple</span>
+                                                <span>Anissa Asabban - marketing head at sybbon fitness center</span>
                                             </div>
                                         </blockquote>
                                     </div>
@@ -454,10 +565,10 @@ and expansion of your business. When your business prospers, so do we. We consid
                                 <div class="item">
                                     <div class="de_testi opt-2">
                                         <blockquote>
-                                            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore.</p>
+                                            <p style="font-size: 13px;">The team at Bloomzzo Digital Solutions exceeded our expectations in every way. They took the time to understand our unique needs and delivered a customized plan that really worked. Their professionalism, creativity, and dedication are top-notch. We’re thrilled with the results and look forward to continuing our partnership</p>
                                             <div class="de_testi_by">
                                                 <img src="images/people/4.jpg" class="img-circle" alt="">
-                                                <span>Thomas, Samsung</span>
+                                                <span>Anaelle D - owner at maria real estate</span>
                                             </div>
                                         </blockquote>
                                     </div>
@@ -466,10 +577,10 @@ and expansion of your business. When your business prospers, so do we. We consid
                                 <div class="item">
                                     <div class="de_testi opt-2">
                                         <blockquote>
-                                            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore.</p>
+                                            <p style="font-size: 13px;"> Bloomzzo Digital Solutions has been an invaluable asset to our business. Their expertise in digital marketing and their ability to adapt strategies based on our evolving needs have been remarkable. We’ve seen impressive growth in our online engagement and lead generation thanks to their efforts.</p>
                                             <div class="de_testi_by">
                                                 <img src="images/people/1.jpg" class="img-circle" alt="">
-                                                <span>John, Pixar Studio</span>
+                                                <span>Fatma Kharal - Owner at Rockitbird Real estate</span>
                                             </div>
                                         </blockquote>
                                     </div>
@@ -478,10 +589,10 @@ and expansion of your business. When your business prospers, so do we. We consid
                                 <div class="item">
                                     <div class="de_testi opt-2">
                                         <blockquote>
-                                            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore.</p>
+                                            <p style="font-size: 13px;">If you’re looking for a digital marketing agency that truly delivers, look no further than Bloomzzo Digital Solutions. Their team is knowledgeable, responsive, and dedicated to achieving the best results for their clients. Our experience with them has been nothing short of excellent.</p>
                                             <div class="de_testi_by">
                                                 <img src="images/people/2.jpg" class="img-circle" alt="">
-                                                <span>Sarah, Microsoft</span>
+                                                <span>Daniel Schwital - Owner at kayees restaurantx</span>
                                             </div>
                                         </blockquote>
                                     </div>
@@ -490,10 +601,10 @@ and expansion of your business. When your business prospers, so do we. We consid
                                 <div class="item">
                                     <div class="de_testi opt-2">
                                         <blockquote>
-                                            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore.</p>
+                                            <p style="font-size: 13px;">Bloomzzo Digital Solutions helped us redefine our online strategy and the results speak for themselves. Their approach is data-driven and results-oriented, which has led to a significant increase in our digital footprint. They’re also incredibly easy to work with, which made the whole process smooth and enjoyable.</p>
                                             <div class="de_testi_by">
                                                 <img src="images/people/3.jpg" class="img-circle" alt="">
-                                                <span>Michael, Apple</span>
+                                                <span>Markus Buehler - Owner at Govichh mechanical services</span>
                                             </div>
                                         </blockquote>
                                     </div>
@@ -502,10 +613,10 @@ and expansion of your business. When your business prospers, so do we. We consid
                                 <div class="item">
                                     <div class="de_testi opt-2">
                                         <blockquote>
-                                            <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore.</p>
+                                            <p style="font-size: 13px;">We’ve worked with several digital marketing agencies in the past, but Bloomzzo Digital Solutions stands out. Their strategic thinking, creative solutions, and attention to detail have made a significant difference in our marketing efforts. Their dedication to our success is evident in everything they do.</p>
                                             <div class="de_testi_by">
                                                 <img src="images/people/4.jpg" class="img-circle" alt="">
-                                                <span>Thomas, Samsung</span>
+                                                <span>Tania Sharma - Owner at Tubacc Health care hospital</span>
                                             </div>
                                         </blockquote>
                                     </div>
