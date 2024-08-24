@@ -1,0 +1,21 @@
+{
+    "website": [
+        {
+            "id": 1,
+            "name": "Aditi Spice Depot",
+            "image": "images/aditi-spice-depot/Aditi-Spice-Depot.png",
+            "serviceimage1": "images/service/webdesign.png",
+            "serviceimage2": "images/service/contentwriting.png",
+            "serviceimage3": "images/service/socialmedia.png",
+            "serviceimage4": "images/service/fb-insta.png",
+            "servicecontent1": "Website Design & Development",
+            "servicecontent2": "Content Writing",
+            "servicecontent3": "Social Media Marketing",
+            "servicecontent4": "Facebook & Instagram Ads",
+            "websiteimage1":   "images/aditi-spice-depot/webimage1.jpg",
+            "websiteimage2":   "images/aditi-spice-depot/webimage2.jpg",
+            "socialimageimage1":   "images/aditi-spice-depot/socialimage1.png",
+            "socialimageimage2":   "images/aditi-spice-depot/socialimage2.png"
+        }
+    ]
+ }        
