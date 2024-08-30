@@ -1755,11 +1755,12 @@ a.btn-link{
 	background: none;
 }
 .de_count h3 {
-	font-family:"Dosis";
-	font-size: 80px;
+	font-family:"dosis";
+	font-size: 50px;
 	letter-spacing: 0px;
 	font-weight:700;
 	margin-bottom:10px;
+	background-color: black;
 }
 /* . span {
 	color: #333;
@@ -1767,7 +1768,7 @@ a.btn-link{
 	font-size: 15px;
 } */
 .text-light .de_count span {
-	color: #fff;
+	color: black;
 }
 .de_count i {
 	display: block;
@@ -4525,6 +4526,9 @@ video, object {
 }
 .img-responsive {
 	display: inline-block;
+	height: 500px;
+	width: 100%;
+	border-radius: 10px;
 }
 .img-shadow {
 	-webkit-box-shadow: 8px 8px 40px 0px rgba(0, 0, 0, 0.3);

@@ -34,17 +34,217 @@
 
 <style>
 
-    .cntr{
-        width: 100%;
-        background: rgb(255,207,235);
-        background: linear-gradient(0deg, rgba(255,207,235,1) 0%, rgba(245,245,245,1) 100%);
-        margin-top: 100px;
-    }
+.bg{
+    width: 100vw;
+    background-color: white;
+}
+
+.cntr {
+    width: 100vw; /* Full viewport width */
+    margin-left: calc(-50vw + 50%); /* Center the element */
+    background: rgb(255, 207, 235);
+    background: linear-gradient(0deg, rgba(255, 207, 235, 1) 0%, rgba(245, 245, 245, 1) 100%);
+    padding: 100px 0;
+    text-align: center;
+}
+
 
     .cntr{
         text-align: center;
         padding: 100px 0;
     }
+
+    .ctr h2{
+        color: #c44b00;
+        font-size: 70px;
+        font-weight: 600;
+        font-family: sans-serif;
+    }
+
+    .img1 img{
+        position: relative;
+        width: 100%;
+        top: -100px;
+        z-index: 2;
+        border-radius: 20px;
+        box-shadow: 3px 16px 9px rgba(0, 0, 0, 0.305);
+    }
+
+    .services {
+    width: 100%; /* Make the services section full width */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Distribute the space evenly between columns */
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    padding: 0 2%; /* Optional: add padding to control spacing on the sides */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+.simg {
+    flex: 1 1 23%; /* Adjust the size of each column */
+    margin-bottom: 20px; /* Space between rows */
+    box-sizing: border-box;
+}
+
+.simg img {
+    opacity: 0.5;
+}
+
+.services h4 {
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #c44b00;
+    text-align: center;
+}
+
+.websc {
+    width: 100vw; /* Make the section full viewport width */
+    margin-left: calc(-50vw + 50%); /* Center the element */
+    padding: 50px 0; /* Adjust padding as needed */
+     background: rgb(245, 245, 245); /*Optional: set background color */
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.websc img{
+    width: 100%;
+    margin-left: 100px;
+    margin-top: 10px;
+}
+
+.websc h2 {
+    color: black;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: sans-serif;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.socials{
+    width: 100vw; /* Make the section full viewport width */
+    margin-left: calc(-50vw + 50%); /* Center the element */
+    padding: 50px 20px; /* Adjust padding as needed */
+     background: rgb(245, 245, 245); /*Optional: set background color */
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.socials img{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.socials h2{
+    color: black;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: sans-serif;
+    margin: 0;
+    margin-bottom: 20px;
+
+}
+
+.abt{
+    width: 100vw;
+    background-color: white;
+    padding: 0 100px;
+}
+
+.container .row .about{
+    background-color: #f0ab00;
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 50px 70px;
+    border-radius: 20px;
+}
+
+.container .row .about h2{
+    font-size: 40px;
+    color: black;
+    font-weight: bold;  
+}
+.container .row .about p{
+    font-size: 24px;
+    color: black;
+    line-height: 40px;
+}
+
+.container .row .about button{
+    background-color: rgb(46, 207, 46);
+        color: white;
+        font-size: 24px;
+        font-family: sans-serif;
+        font-weight: 700;
+        border-radius: 30px;
+        border: none;
+        padding: 20px 40px;
+        transition: .3s all ease-in-out;
+}
+
+
+
+    @media (max-width: 768px) {
+
+    .img1 img{
+       width: 90vw;
+       margin-left: -23px;
+    }
+    .ctr h2{
+        font-size: 30px;
+    }
+
+    .services h4 {
+    margin-top: 0;
+    font-size: 17px;
+
+    }
+
+    .websc img{
+    margin-left: 0;
+    }
+
+    .websc h2 {
+    font-size: 20px;
+}
+
+    .abt{
+        padding: 0 50px;
+    }
+
+    .container .row .about{
+    padding: 50px 20px;
+    }
+
+    .container .row .about h2{
+    font-size: 29px; 
+}
+
+.container .row .about p{
+    font-size: 17px;
+    line-height: 30px;
+    font-weight: 600px;
+    margin-top: -30px;
+}
+
+.container .row .about button{
+    background-color: rgb(46, 207, 46);
+        color: white;
+        font-size: 16px;
+        font-family: sans-serif;
+        font-weight: 700;
+        border-radius: 30px;
+        border: none;
+        padding: 10px 37px;
+        transition: .3s all ease-in-out;
+}
+
+}
 
 
 
@@ -108,17 +308,23 @@
 
 
 <!-- banner section begin  -->
-        <div class="container cntr">
-            <div class="row" id="pdetail">
-                <div class="col-md-12 ctr">
-                    <h2>Portfolio</h2>
-                </div>
-            
-
+        <div class="container bg">
+            <div class="row" id="portfoliodetail">
 
             </div>
         </div>
         <!-- banner section end  -->
+
+
+        <div class="container abt">
+            <div class="row">
+                <div class="col-md-12 about">
+                    <h2>Learn More About Bloomzo Social Media Marketing Services</h2>
+                    <p>Reserve a free 45-minute expert advisory session with us no obligations or strings attached. We will evaluate your current marketing strategies, provide valuable insights, and answer any questions you have.</p>
+                    <button>Get A Free Audit Today</button>
+                </div>
+            </div>
+        </div>
 
 
                    <!-- footer begin -->
@@ -218,58 +424,7 @@
             
         
 
-            <script>
-                let detailPage = $('#pdetail');
-        let url = location.href;
-        let obj = new URL(url);
-        let name = obj.searchParams.get('name');
-        let image = obj.searchParams.get('image');
-        let price = obj.searchParams.get('price')
-        let simg1 = obj.searchParams.get('simg1');
-        let simg2 = obj.searchParams.get('simg2');
-        let simg3 = obj.searchParams.get('simg3');
-        let simg4 = obj.searchParams.get('simg4');
-        let des = obj.searchParams.get('des');
-        detailPage.html(
-            `
-            <div class="col-lg-5 col-md-12 col-12">
-                <img class="img-fluid  pb-1" src="`+image+`" id="mainImg" alt="">
-                <div class="small-img-group ">
-                    <div class="small-img-col">
-                        <img src="`+simg1+`" class="small-img" alt="">
-                    </div>
-                    <div class="small-img-col">
-                        <img src="`+simg2+`" class="small-img" alt="">
-                    </div>
-                    <div class="small-img-col">
-                        <img src="`+simg3+`" class="small-img" alt="">
-                    </div>
-                    <div class="small-img-col">
-                        <img src="`+simg4+`" class="small-img" alt="">
-                    </div>
-    
-                </div>
-                </div>
-            <div class="col-lg-7 col-md-12 col-12">
-                <h6 class="pt-3">Home / T-Shirt</h6>
-                <h3 class="py-4">`+name+`</h3>
-                <h2>`+price+`</h2>
-                <select name="Select-Size" id="select" class="my-3">
-                    <option>Select Size</option>
-                    <option>XL</option>
-                    <option>XXL</option>
-                    <option>Small</option>
-                    <option>Large</option>
-                </select>
-                <input type="number" value="1">
-                <button class="buy-btn">Add To Cart</button>
-                <h4 class="mt-5 mb-5">Product Detail</h4>
-                <p>`+des+`</p>
-
-            </div>
-            `
-        );
-        </script>
+      
                 
         
             <!-- Javascript Files
@@ -292,6 +447,114 @@
             <script src="js/app.js"></script>
             <script src="js/designesia.js"></script>
             <script src="demo/demo.js"></script>
+
+            <script>
+        let detailPage = $('#portfoliodetail');
+        let url = location.href;
+        let obj = new URL(url);
+        let name = obj.searchParams.get('name');
+        let subtitle = obj.searchParams.get('subtitle');
+        let image = obj.searchParams.get('image')
+        let detailimage = obj.searchParams.get('detailimage');
+        let serviceimage1 = obj.searchParams.get('serviceimage1');
+        let serviceimage2 = obj.searchParams.get('serviceimage2');
+        let serviceimage3 = obj.searchParams.get('serviceimage3');
+        let serviceimage4 = obj.searchParams.get('serviceimage4');
+        let serviceimage5 = obj.searchParams.get('serviceimage5');
+        let serviceimage6 = obj.searchParams.get('serviceimage6');
+        let servicecontent1 = obj.searchParams.get('servicecontent1');
+        let servicecontent2 = obj.searchParams.get('servicecontent2');
+        let servicecontent3 = obj.searchParams.get('servicecontent3');
+        let servicecontent4 = obj.searchParams.get('servicecontent4');
+        let servicecontent5 = obj.searchParams.get('servicecontent5');
+        let servicecontent6 = obj.searchParams.get('servicecontent6');
+        let websitetitle = obj.searchParams.get('websitetitle');
+        let websiteimage1 = obj.searchParams.get('websiteimage1');
+        let websiteimage2 = obj.searchParams.get('websiteimage2');
+        let socialmediatitle = obj.searchParams.get('socialmediatitle');
+        let socialimage1 = obj.searchParams.get('socialimage1');
+        let socialimage2 = obj.searchParams.get('socialimage2');
+        let socialimage3 = obj.searchParams.get('socialimage3');
+        let socialimage4 = obj.searchParams.get('socialimage4'); 
+        detailPage.html(
+            `
+            <div class="col-md-12 ctr cntr">
+                    <h2>`+name+`</h2>
+                </div>
+
+                <div class="container img1">
+                    <img src="`+detailimage+`" alt="">
+                </div>
+
+                <div class="container">
+                    <div class="row services">
+                        <div class="col-md-2 simg ">
+                            <img src="`+serviceimage1+`" alt="">
+                            <h4>`+servicecontent1+`</h4>
+                        </div>
+                        <div class="col-md-2 simg">
+                            <img src="`+serviceimage2+`" alt="">
+                            <h4>`+servicecontent2+`</h4>
+                        </div>
+                        <div class="col-md-2 simg">
+                            <img src="`+serviceimage3+`" alt="">
+                            <h4>`+servicecontent3+`</h4>
+                        </div>
+                        <div class="col-md-2 simg">
+                            <img src="`+serviceimage4+`" alt="">
+                            <h4>`+servicecontent4+`</h4>
+                        </div>
+                        <div class="col-md-2 simg">
+                            <img src="`+serviceimage5+`" alt="">
+                            <h4>`+servicecontent5+`</h4>
+                        </div>
+                        <div class="col-md-2 simg">
+                            <img src="`+serviceimage6+`" alt="">
+                            <h4>`+servicecontent6+`</h4>
+                        </div>
+                    </div>
+
+                </div>
+
+                <section class="container websc">
+                        <div class="row">
+                            <div class="col-md-12 ">
+                                <h2>`+websitetitle+`</h2>
+                            </div>
+            
+                            <div class="col-md-5">
+                                <img src="`+websiteimage1+`" alt="">
+                            </div>
+                            <div class="col-md-5">
+                                <img src="`+websiteimage2+`" alt="">
+                            </div>
+                        </div>
+                </section>
+
+                <section class="container socials">
+                    <div class="row">
+                        <div class="col-md-12 ">
+                            <h2>`+socialmediatitle+`</h2>
+                        </div>
+        
+                        <div class="col-md-3">
+                            <img src="`+socialimage1+`" alt="">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="`+socialimage2+`" alt="">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="`+socialimage3+`" alt="">
+                        </div>
+                        <div class="col-md-3">
+                            <img src="`+socialimage4+`" alt="">
+                        </div>
+                        
+                    </div>
+            </section>
+            `
+        );
+        </script>
         </body>
         
         </html>

@@ -211,81 +211,9 @@
 <!-- project section begin  -->
 
 <div class="container">
-    <div class="row service">
-        <div class="col-md-6">
-            <a href="" class="card-link"> <div class="card" style="background-image: url(images/portfolio/aditispice.jpg);">
-                <div class="content">
-                <h4>Aditi Spice Depot</h4>
-                <p>Social media, Website</p>
-            </div>
-            </div>
-            </a>
-        </div>
-        <div class="col-md-6 ">
-           <a href="" class="card-link">
-             <div class="card" style="background-image: url(images/portfolio/williamsville.jpg);">
-                <div class="content">
-                <h4>williamsville Wellness</h4>
-                <p>Social media, Website</p>
-            </div>
-            </div></a>
-        </div>
-        <div class="col-md-6 ">
-            <a href="" class="card-link">   <div class="card" style="background-image: url(images/portfolio/Americanepal.jpg);">
-                <div class="content">
-                <h4>America Nepal Society</h4>
-                <p>Website</p>
-            </div>
-            </div> </a>
-        </div>
-        <div class="col-md-6 ">
-            <a href="" class="card-link">  <div class="card" style="background-image: url(images/portfolio/Regalsedan.png);">
-                <div class="content">
-                <h4>Regal Station & Limousines</h4>
-                <p>Website</p>
-            </div>
-            </div> </a>
-        </div>
-        <div class="col-md-6 ">
-            <a href="" class="card-link">  <div class="card" style="background-image: url(images/portfolio/MyMed.png);">
-                <div class="content">
-                <h4>MyMed Queue</h4>
-                <p>Social media, Website</p>
-            </div>
-            </div> </a>
-        </div>
-        <div class="col-md-6 ">
-            <a href="" class="card-link"> <div class="card" style="background-image: url(images/portfolio/Gymsportz.jpg);">
-                <div class="content">
-                <h4>Gymsportz</h4>
-                <p>Social media, Website</p>
-            </div>
-            </div> </a>
-        </div>
-        <div class="col-md-6 ">
-            <a href="" class="card-link"> <div class="card" style="background-image: url(images/portfolio/Avesconstruction.png);">
-                <div class="content">
-                <h4>Aves Construction</h4>
-                <p>Social media, Website</p>
-            </div>
-            </div> </a>
-        </div>
-        <div class="col-md-6 ">
-            <a href="" class="card-link">  <div class="card" style="background-image: url(images/portfolio/Lukahome.png);">
-                <div class="content">
-                <h4>Luka Home Servess</h4>
-                <p>Website</p>
-            </div>
-            </div> </a>
-        </div>
-        <div class="col-md-6 ">
-            <a href="" class="card-link">  <div class="card" style="background-image: url(images/portfolio/Aditikitchen.png);">
-                <div class="content">
-                <h4>Aditi Kitchen</h4>
-                <p>Social media, Website</p>
-            </div>
-            </div> </a>
-        </div>
+    <div class="row service" id="portfolioproject">
+
+        
     </div>
 </div>
 
@@ -388,6 +316,7 @@
     
         
     
+       
             
     
         <!-- Javascript Files
@@ -410,6 +339,37 @@
         <script src="js/app.js"></script>
         <script src="js/designesia.js"></script>
         <script src="demo/demo.js"></script>
+
+        <script>
+            $row = $('#portfolioproject');
+        $col = '';
+        $.ajax({
+            url: 'index.json',
+            type: 'get',
+            success: function (data) {
+                $.each(data.Website, function (k, v) {
+
+                    // Featured Section
+                    if (v.id && v.image && v.name && v.subtitle) {
+
+                    $col += ` <div class="col-md-6">
+            <a href="portfoliodetail.html?id=`+ v.id + `&image=` + v.image + `&name=` + v.name + `&subtitle=` + v.subtitle + `&detailimage=` + v.detailimage + `&serviceimage1=` + v.serviceimage1 + `&serviceimage2=` + v.serviceimage2 + `&serviceimage3=` + v.serviceimage3 + `&serviceimage4=` + v.serviceimage4 + `&serviceimage5=` + v.serviceimage5 + `&serviceimage6=` + v.serviceimage6 + `&servicecontent1=` + v.servicecontent1 + `&servicecontent2=` + v.servicecontent2 + `&servicecontent3=` + v.servicecontent3 + `&servicecontent4=` + v.servicecontent4 + `&servicecontent5=` + v.servicecontent5 + `&servicecontent6=` + v.servicecontent6 + `&websitetitle=` + v.websitetitle + `&websiteimage1=` + v.websiteimage1 + `&websiteimage2=` + v.websiteimage2 + `&socialmediatitle=` + v.socialmediatitle + `&socialimage1=` + v.socialimage1 + `&socialimage2=` + v.socialimage2 + `&socialimage3=` + v.socialimage3 + `&socialimage4=` + v.socialimage4 +`" class="card-link">
+
+             <div class="card" style="background-image: url(`+ v.image + `);">
+            <div class="content">
+            <h4>`+ v.name + `</h4>
+            <p>`+ v.subtitle + `</p>
+            </div>
+            </div>
+            </a>
+        </div>`
+    }
+    })
+    $row.html($col);
+
+}
+})
+        </script>
     </body>
     
     </html>
